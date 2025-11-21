@@ -34,7 +34,7 @@ class PerformanceReport(Report):
     name = 'performance'
     description = 'Средняя эффективность по позициям'
 
-    def compute(self, rows: list[dict]) -> tuple[list[str], list[tuple]]:
+    def compute(self, rows: list[dict]) -> tuple[tuple[str], list[tuple]]:
         agg_sum: dict[str, float] = defaultdict(float)
         agg_count: dict[str, int] = defaultdict(int)
         for r in rows:
@@ -46,7 +46,7 @@ class PerformanceReport(Report):
             avg = agg_sum[position] / agg_count[position] if agg_count[position] else 0.0
             table.append((position, round(avg, 2)))
         
-        headers = ['position', 'performance']
+        headers = ('position', 'performance')
         return headers, sorted(table, key=lambda item: item[1], reverse=True)
 
 
