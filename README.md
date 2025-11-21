@@ -30,8 +30,8 @@
 	        name = 'your_report'
 	        description = 'Описание'
   
-	        def compute(self, rows: list[dict]) -> tuple[list[str], list[tuple]]:
-	            headers = ['Колонка1', 'Колонка 2']
+	        def compute(self, rows: list[dict]) -> tuple[tuple[str], list[tuple]]:
+	            headers = ('Колонка1', 'Колонка 2')
 	            data = []
                 return headers, data
 
@@ -46,4 +46,5 @@
 
 ## Результат
 <img src="images/result.png" alt="Результат">
+
 
