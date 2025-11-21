@@ -23,7 +23,7 @@
 
   		python3 main.py --files employees1.csv employees2.csv --report performance
 
-## Шаблон нового отчета.
+## Шаблон нового отчета
 * Создайте новый класс в reports.py
   
 	    class YourReport(Report):
@@ -39,3 +39,5 @@
 
   		register_report(YourReport())
 
+## Результат
+<img src="images/result.png" alt="Результат">
