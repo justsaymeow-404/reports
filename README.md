@@ -14,7 +14,7 @@
 ## Установка
 * Установить зависимости:
   * pip install tabulate
-  * pip install pytst (Для тестов)
+  * pip install pytest (Для тестов)
   * pip install pandas (Для тестов)
 
 ## Запуск
@@ -39,5 +39,11 @@
 
   		register_report(YourReport())
 
+## Тестирование
+* Запуск тестов
+
+  		python -m pytest -q
+
 ## Результат
 <img src="images/result.png" alt="Результат">
+
