@@ -33,6 +33,9 @@
 	        def compute(self, rows: list[dict]) -> tuple[list[str], list[tuple]]:
 	            headers = ['Колонка1', 'Колонка 2']
 	            data = []
+
+				return headers, data
+
 * Зарегистрируйте отчет
 
   		register_report(YourReport())

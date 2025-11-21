@@ -1,6 +1,5 @@
 import csv
 import sys
-
 from typing import Optional
 
 

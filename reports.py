@@ -1,6 +1,7 @@
 import argparse
 from collections import defaultdict
 from typing import Optional
+
 from utils.csv_io import to_float
 
 
@@ -8,7 +9,7 @@ class Report:
     name: str = ""
     description = ""
 
-    def compute(self, rows: list[dict[str, str]]) -> tuple[list[str], list[list]]:
+    def compute(self, rows: list[dict[str, str]]) -> tuple[list[str], list[tuple]]:
         raise NotImplementedError
 
 
@@ -39,7 +40,6 @@ class PerformanceReport(Report):
         for r in rows:
             agg_sum[r['position']] += to_float(r['performance'])
             agg_count[r['position']] += 1
-        print(agg_sum, agg_count)
 
         table: list[list] = []
         for position in agg_sum.keys():
